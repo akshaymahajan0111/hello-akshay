@@ -177,7 +177,7 @@ export default function HomePage() {
 
           <div className="flex items-end justify-between gap-4 text-sm font-semibold text-muted-foreground">
             <span>Open wide. Say hi.</span>
-            <span className="rounded-full border border-border bg-card px-3 py-1.5">Hello, Akshay!</span>
+            <span className="rounded-full border border-border bg-card px-3 py-1.5">Hello, Akshay from GitHub!</span>
           </div>
         </div>
       </main>
