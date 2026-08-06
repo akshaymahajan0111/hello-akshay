@@ -176,7 +176,7 @@ export default function HomePage() {
           </section>
 
           <div className="flex items-end justify-between gap-4 text-sm font-semibold text-muted-foreground">
-            <span>A little hello from AAB to you</span>
+            <span>A little hello from us AAB you</span>
             <span className="rounded-full border border-border bg-card px-3 py-1.5">Hello, AAB!</span>
           </div>
         </div>
