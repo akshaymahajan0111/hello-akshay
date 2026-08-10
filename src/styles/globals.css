@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Nunito+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,46 +7,46 @@
 @layer base {
   :root {
     /* Core Colors */
-    --background: 37 100% 95%;
+    --background: 43 33% 96%;
     --foreground: 0 0% 4%;
-    --card: 43 100% 99%;
-    --card-foreground: 14 31% 14%;
-    --popover: 37 100% 95%;
+    --card: 43 33% 96%;
+    --card-foreground: 0 0% 9%;
+    --popover: 43 33% 96%;
     --popover-foreground: 0 0% 4%;
-    --primary: 11 79% 58%;
+    --primary: 0 0% 9%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 44 90% 63%;
-    --secondary-foreground: 0 0% 34%;
-    --muted: 31 91% 91%;
-    --muted-foreground: 17 31% 33%;
-    --accent: 171 57% 43%;
-    --accent-foreground: 0 0% 100%;
+    --secondary: 44 20% 89%;
+    --secondary-foreground: 0 0% 39%;
+    --muted: 45 21% 93%;
+    --muted-foreground: 43 4% 35%;
+    --accent: 43 15% 82%;
+    --accent-foreground: 0 0% 34%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 28 54% 81%;
-    --input: 28 54% 81%;
-    --ring: 11 79% 58%;
+    --border: 43 13% 78%;
+    --input: 43 13% 78%;
+    --ring: 0 0% 9%;
 
     /* Extended Colors */
-    --chart-1: 10 77% 88%;
-    --chart-2: 11 78% 73%;
-    --chart-3: 11 79% 58%;
-    --chart-4: 11 79% 43%;
-    --chart-5: 11 79% 28%;
+    --chart-1: 0 0% 39%;
+    --chart-2: 0 0% 24%;
+    --chart-3: 0 0% 9%;
+    --chart-4: 0 0% 0%;
+    --chart-5: 0 0% 0%;
 
     /* Sidebar Colors */
-    --sidebar: 31 91% 91%;
+    --sidebar: 45 21% 93%;
     --sidebar-foreground: 0 0% 4%;
-    --sidebar-primary: 11 79% 58%;
+    --sidebar-primary: 0 0% 9%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 171 57% 43%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 28 54% 81%;
-    --sidebar-ring: 11 79% 58%;
+    --sidebar-accent: 43 15% 82%;
+    --sidebar-accent-foreground: 0 0% 34%;
+    --sidebar-border: 43 13% 78%;
+    --sidebar-ring: 0 0% 9%;
 
     /* Typography */
-    --font-sans: "Nunito Sans", -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-heading: "Baloo 2", -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-heading: "Playfair Display", Georgia, serif;
     --font-serif: ui-serif, Georgia, "Times New Roman", serif;
     --font-mono: ui-monospace, "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
 

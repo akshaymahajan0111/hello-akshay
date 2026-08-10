@@ -1,77 +1,26 @@
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-/**
- * Header component for website navigation
- *
- * A simple, customizable header with logo and navigation links.
- * This component is designed to be directly edited by the AI agent
- * to match the specific needs of each website.
- */
 export default function Header() {
-  const location = useLocation();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const navItems = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/contact', label: 'Contact' },
-  ];
-
   return (
-    <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
-          <Link to="/" className="text-xl font-bold text-foreground">
-            App
-          </Link>
+    <header className="border-b border-border bg-background">
+      <div className="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-6 sm:px-10 lg:px-16">
+        <Link
+          to="/"
+          className="group flex min-w-0 shrink items-center gap-3 text-sm font-medium tracking-[-0.01em] text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-4"
+          aria-label="Hello World home"
+        >
+          <span className="grid h-7 w-7 shrink-0 place-items-center border border-foreground text-[10px] leading-none">HW</span>
+          <span className="whitespace-nowrap">Hello World</span>
+        </Link>
 
-          <nav className="hidden md:flex gap-6">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                to={item.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  location.pathname === item.href
-                    ? 'text-foreground'
-                    : 'text-muted-foreground'
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
-
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 hover:bg-accent rounded-md transition-colors"
-            aria-label="Toggle menu"
+        <nav aria-label="Main navigation" className="flex items-center">
+          <Link
+            to="/"
+            className="relative text-sm text-muted-foreground transition-colors duration-200 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-4 after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-foreground after:transition-all after:duration-200 hover:after:w-full"
           >
-            {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
-        </div>
-
-        {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-border py-4">
-            <nav className="flex flex-col gap-2">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  to={item.href}
-                  className={`text-sm font-medium transition-colors hover:text-primary py-2 ${
-                    location.pathname === item.href
-                      ? 'text-foreground'
-                      : 'text-muted-foreground'
-                  }`}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
-        )}
+            Welcome
+          </Link>
+        </nav>
       </div>
     </header>
   );

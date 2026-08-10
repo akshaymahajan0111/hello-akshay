@@ -1,35 +1,18 @@
 import { Link } from 'react-router-dom';
+import { home } from 'virtual:content';
 
-/**
- * Footer component for website
- *
- * A simple, customizable footer with copyright and links.
- * This component is designed to be directly edited by the AI agent
- * to match the specific needs of each website.
- */
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <footer className="mt-auto border-t border-border bg-background">
-      <div className="container mx-auto px-4 py-6">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-sm text-muted-foreground">
-            © {currentYear} App. All rights reserved.
-          </div>
-
-          <nav className="flex gap-6">
+    <footer className="bg-background">
+      <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
+        <div className="grid grid-cols-[1fr_auto] items-center gap-6 border-t border-border py-7">
+          <p className="text-xs text-muted-foreground">{home.footer.copyright}</p>
+          <nav aria-label="Footer navigation">
             <Link
-              to="/privacy"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              to="/"
+              className="relative text-xs text-muted-foreground transition-colors duration-200 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-4 after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-foreground after:transition-all after:duration-200 hover:after:w-full"
             >
-              Privacy
-            </Link>
-            <Link
-              to="/terms"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Terms
+              {home.footer.link}
             </Link>
           </nav>
         </div>
